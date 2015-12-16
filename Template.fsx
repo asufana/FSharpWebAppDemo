@@ -9,7 +9,7 @@ open Db
 module Template =
   open Suave.Html
 
-  //helpers
+  //ヘルパ関数
   let divId id = divAttr ["id",id]
   let aHref href = tag "a" ["href",href]
   let h1 xml = tag "blockquote" [] (tag "h1" [] xml)
@@ -22,17 +22,18 @@ module Template =
 
   let button title = tag "button" ["type","button"; " class","btn btn-primary btn-xs"] (text title)
 
-
   //html基本構成
   let bootstrapUrl = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/"
   let index container =
     html [
+      //ヘッダ部
       head [ title "Lightning Talks"
              scriptAttr [ "src","https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"; " type","text/javascript"] [text ""]
              linkAttr [ "href",bootstrapUrl + "/css/bootstrap.min.css"; " rel","stylesheet"; " type","text/css" ]
              scriptAttr [ "src",bootstrapUrl + "/js/bootstrap.min.js"; " type","text/javascript"] [text ""]
              linkAttr [ "href","/site.css"; " rel","stylesheet"; " type","text/css" ]
       ]
+      //コンテンツ部
       body [
         divId "header" [
           h1 (aHref "/" (text "Lightning Talks"))
