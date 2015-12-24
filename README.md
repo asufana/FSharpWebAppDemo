@@ -1,7 +1,7 @@
 
 # F# (FSharp) WebApp事始め
 
-OSX El Capitan でゼロから始める F# WebApp！
+Mac OSX El Capitan でゼロから始める F# WebApp！
 
 新しい言語を学ぶ際には、言語リファレンスを上から読んでいくのも良いが、実際に動くものを作りながら学んでいく[遅延勉強法](http://d.hatena.ne.jp/amachang/20080204/1202104260)なアプローチが良いと思う。
 
